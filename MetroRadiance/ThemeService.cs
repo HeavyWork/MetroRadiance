@@ -13,6 +13,7 @@ namespace MetroRadiance
 	{
 		Dark,
 		Light,
+		CriticalRed,
 	}
 
 	public enum Accent
@@ -21,6 +22,7 @@ namespace MetroRadiance
 		Blue,
 		Orange,
 		Original,
+		Red,
 	}
 
 	public class ThemeService : Notificator
