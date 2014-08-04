@@ -11,11 +11,12 @@
 					  Title="MainWindow"
 					  Width="500"
 					  Height="300"
+					  FontFamily="Segoe UI"
 					  Background="{DynamicResource ThemeBrushKey}"
 					  Foreground="{DynamicResource ActiveForegroundBrushKey}"
 					  WindowState="{Binding WindowState}"
 					  IsRestoringWindowPlacement="True"
-					  SnapsToDevicePixels="True"
+					  UseLayoutRounding="True"
 					  TextOptions.TextFormattingMode="Display">
 
 	<!--<controls:MetroWindow.MetroChromeBehavior>
@@ -59,9 +60,9 @@
 						   Text="{Binding Title}"
 						   TextTrimming="CharacterEllipsis"
 						   Foreground="{DynamicResource ForegroundBrushKey}"
-						   FontFamily="Meiryo"
-						   FontSize="15"
-						   Margin="3,0,0,-3"
+						   FontFamily="Segoe UI Light"
+						   FontSize="18"
+						   Margin="3,0,0,0"
 						   VerticalAlignment="Center" />
 				<controls:SystemButtons Grid.Column="2"
 										VerticalAlignment="Top" />
@@ -159,6 +160,7 @@
 				</WrapPanel>
 
 				<views:BrushSamples />
+				<views:ControlSamples />
 			</StackPanel>
 		</ScrollViewer>
 

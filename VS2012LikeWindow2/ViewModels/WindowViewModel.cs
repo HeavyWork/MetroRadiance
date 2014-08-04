@@ -128,9 +128,29 @@ namespace VS2012LikeWindow2.ViewModels
 
 		#endregion
 
+		#region SampleNum 変更通知プロパティ
+
+		private int _SampleNum;
+
+		public int SampleNum
+		{
+			get { return this._SampleNum; }
+			set
+			{
+				if (this._SampleNum != value)
+				{
+					this._SampleNum = value;
+					this.RaisePropertyChanged();
+				}
+			}
+		}
+
+		#endregion
+
+
 		public WindowViewModel()
 		{
-			this.Title = "Visual Studio 2012 っぽい何か";
+			this.Title = "Visual Studio Style Window";
 		}
 
 		public void ChangePurple()
