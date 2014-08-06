@@ -41,7 +41,7 @@ namespace MetroRadiance.Controls
 			{
 				return this.AllowsEmpty
 					? new ValidationResult(true, null)
-					: new ValidationResult(false, "値を入力してください。");
+					: new ValidationResult(false, "값을 입력해주세요");
 			}
 
 			int number;
@@ -51,17 +51,17 @@ namespace MetroRadiance.Controls
 			}
 			catch (Exception)
 			{
-				return new ValidationResult(false, "数値を入力してください。");
+				return new ValidationResult(false, "수치를 입력해주세요");
 			}
 
 			if (this.Min.HasValue && number < this.Min)
 			{
-				return new ValidationResult(false, string.Format("{0} 以上の数値を入力してください。", this.Min));
+				return new ValidationResult(false, string.Format("{0} 이상의 수치를 입력해주세요", this.Min));
 			}
 
 			if (this.Max.HasValue && this.Max < number)
 			{
-				return new ValidationResult(false, string.Format("{0} 以下の数値を入力してください。", this.Max));
+				return new ValidationResult(false, string.Format("{0} 이하의 수치를 입력해주세요", this.Max));
 			}
 
 			return new ValidationResult(true, null);
