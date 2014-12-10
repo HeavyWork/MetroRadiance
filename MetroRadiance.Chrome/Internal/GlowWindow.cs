@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using MetroRadiance.Chrome.Behaviors;
+using MetroRadiance.Core;
+using MetroRadiance.Core.Win32;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -8,9 +9,6 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Interop;
 using System.Windows.Media;
-using MetroRadiance.Chrome.Behaviors;
-using MetroRadiance.Core;
-using MetroRadiance.Core.Win32;
 
 namespace MetroRadiance.Chrome.Internal
 {

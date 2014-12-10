@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace MetroRadiance.Chrome
 {
 	public enum ChromeMode

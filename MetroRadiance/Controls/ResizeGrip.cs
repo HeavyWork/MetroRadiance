@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MetroRadiance.Core.Win32;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
-using MetroRadiance.Core.Win32;
 
 namespace MetroRadiance.Controls
 {

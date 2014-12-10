@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MetroRadiance.Chrome.Behaviors;
+using MetroRadiance.Core;
+using MetroRadiance.Core.Win32;
+using System;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interactivity;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Shell;
-using MetroRadiance.Chrome.Behaviors;
-using MetroRadiance.Core;
-using MetroRadiance.Core.Win32;
 
 namespace MetroRadiance.Controls
 {

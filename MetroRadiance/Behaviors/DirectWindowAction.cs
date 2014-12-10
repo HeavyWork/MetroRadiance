@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using MetroRadiance.Controls;
+using MetroRadiance.Internal;
 using System.Windows;
 using System.Windows.Interactivity;
-using MetroRadiance.Controls;
-using MetroRadiance.Internal;
 
 namespace MetroRadiance.Behaviors
 {
