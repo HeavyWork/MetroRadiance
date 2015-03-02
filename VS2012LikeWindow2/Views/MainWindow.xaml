@@ -9,6 +9,7 @@
 					  xmlns:vm="clr-namespace:VS2012LikeWindow2.ViewModels"
 					  xmlns:views="clr-namespace:VS2012LikeWindow2.Views"
 					  Title="MainWindow"
+					  Topmost="True"
 					  Width="500"
 					  Height="300"
 					  FontFamily="Segoe UI"
@@ -94,6 +95,17 @@
 							<i:EventTrigger EventName="Click">
 								<ei:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangeLightTheme" />
+							</i:EventTrigger>
+						</i:Interaction.Triggers>
+					</Button>
+					<Button Content="Critical Red theme"
+							Width="120"
+							Height="30"
+							Margin="5">
+						<i:Interaction.Triggers>
+							<i:EventTrigger EventName="Click">
+								<ei:CallMethodAction TargetObject="{Binding}"
+													 MethodName="ChangeCriticalTheme" />
 							</i:EventTrigger>
 						</i:Interaction.Triggers>
 					</Button>

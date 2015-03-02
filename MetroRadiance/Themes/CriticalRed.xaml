@@ -1,47 +1,47 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-	<Color x:Key="ThemeColorKey">#FF471109</Color>
+	<Color x:Key="ThemeColorKey">#FF840404</Color>
 	<SolidColorBrush x:Key="ThemeBrushKey"
-					 Color="#FF471109" />
+					 Color="#FF840404" />
 
 
 
-	<Color x:Key="BackgroundColorKey">#FF471109</Color>
+	<Color x:Key="BackgroundColorKey">#FF430000</Color>
 	<SolidColorBrush x:Key="BackgroundBrushKey"
-					 Color="#FF471109" />
+					 Color="#FF430000" />
 
-	<Color x:Key="BorderColorKey">#FF6E362E</Color>
+	<Color x:Key="BorderColorKey">#FF610303</Color>
 	<SolidColorBrush x:Key="BorderBrushKey"
-					 Color="#FF6E362E" />
+					 Color="#FF610303" />
 
-	<Color x:Key="ForegroundColorKey">White</Color>
+	<Color x:Key="ForegroundColorKey">#FFFFFFFF</Color>
 	<SolidColorBrush x:Key="ForegroundBrushKey"
-					 Color="White" />
+					 Color="#FFFFFFFF" />
 
 
 
-	<Color x:Key="SemiactiveBackgroundColorKey">#FF530000</Color>
+	<Color x:Key="SemiactiveBackgroundColorKey">#FFA22626</Color>
 	<SolidColorBrush x:Key="SemiactiveBackgroundBrushKey"
-					 Color="#FF530000" />
+					 Color="#FFA22626" />
 
-	<Color x:Key="SemiactiveBorderColorKey">#FF640A0A</Color>
+	<Color x:Key="SemiactiveBorderColorKey">#FF610303</Color>
 	<SolidColorBrush x:Key="SemiactiveBorderBrushKey"
-					 Color="#FF640A0A" />
+					 Color="#FF610303" />
 
-	<Color x:Key="SemiActiveForegroundColorKey">#FFFF4242</Color>
+	<Color x:Key="SemiActiveForegroundColorKey">#FFCD2323</Color>
 	<SolidColorBrush x:Key="SemiActiveForegroundBrushKey"
-					 Color="#FFFF4242" />
+					 Color="#FFA1A0A0" />
 
 
 
-	<Color x:Key="ActiveBackgroundColorKey">#FF640A0A</Color>
+	<Color x:Key="ActiveBackgroundColorKey">#FF610303</Color>
 	<SolidColorBrush x:Key="ActiveBackgroundBrushKey"
-					 Color="#FF640A0A" />
+					 Color="#FF610303" />
 
-	<Color x:Key="ActiveBorderColorKey">#FF640A0A</Color>
+	<Color x:Key="ActiveBorderColorKey">#FF610303</Color>
 	<SolidColorBrush x:Key="ActiveBorderBrushKey"
-					 Color="#FF640A0A" />
+					 Color="#FF610303" />
 
 	<Color x:Key="ActiveForegroundColorKey">White</Color>
 	<SolidColorBrush x:Key="ActiveForegroundBrushKey"
@@ -49,27 +49,27 @@
 
 
 
-	<Color x:Key="InactiveBackgroundColorKey">#FF680000</Color>
+	<Color x:Key="InactiveBackgroundColorKey">#FF840404</Color>
 	<SolidColorBrush x:Key="InactiveBackgroundBrushKey"
-					 Color="#FF680000" />
+					 Color="#FF840404" />
 
-	<Color x:Key="InactiveBorderColorKey">#FF4D0A0A</Color>
+	<Color x:Key="InactiveBorderColorKey">#FF610303</Color>
 	<SolidColorBrush x:Key="InactiveBorderBrushKey"
-					 Color="#FFCB4949" />
+					 Color="#FF610303" />
 
-	<Color x:Key="InactiveForegroundColorKey">#FFFF5F5F</Color>
+	<Color x:Key="InactiveForegroundColorKey">#FF787878</Color>
 	<SolidColorBrush x:Key="InactiveForegroundBrushKey"
-					 Color="#FFFF5F5F" />
+					 Color="#FF787878" />
 
 
 
-	<Color x:Key="HighlightBackgroundColorKey">#FFD13838</Color>
+	<Color x:Key="HighlightBackgroundColorKey">#FFBE3C3C</Color>
 	<SolidColorBrush x:Key="HighlightBackgroundBrushKey"
-					 Color="#FFD13838" />
+					 Color="#FFBE3C3C" />
 
-	<Color x:Key="HighlightBorderColorKey">#FFD13838</Color>
+	<Color x:Key="HighlightBorderColorKey">#FFBE3C3C</Color>
 	<SolidColorBrush x:Key="HighlightBorderBrushKey"
-					 Color="#FFD13838" />
+					 Color="#FFBE3C3C" />
 
 	<Color x:Key="HighlightForegroundColorKey">#FFFFFFFF</Color>
 	<SolidColorBrush x:Key="HighlightForegroundBrushKey"
@@ -77,41 +77,46 @@
 
 
 
-	<Color x:Key="Highlight2BackgroundColorKey">#FFFF4242</Color>
+	<Color x:Key="Highlight2BackgroundColorKey">#FFCD2323</Color>
 	<SolidColorBrush x:Key="Highlight2BackgroundBrushKey"
-					 Color="#FFFF4242" />
+					 Color="#FFCD2323" />
 
-	<Color x:Key="Highlight2BorderColorKey">#FFFF4242</Color>
+	<Color x:Key="Highlight2BorderColorKey">#FFCD2323</Color>
 	<SolidColorBrush x:Key="Highlight2BorderBrushKey"
-					 Color="#FFFF4242" />
+					 Color="#FFCD2323" />
 
-	<Color x:Key="Highlight2ForegroundColorKey">#FFDC0000</Color>
+	<Color x:Key="Highlight2ForegroundColorKey">#FF000000</Color>
 	<SolidColorBrush x:Key="Highlight2ForegroundBrushKey"
-					 Color="#FFDC0000" />
+					 Color="#FF000000" />
 
 
 
-	<Color x:Key="Highlight3BackgroundColorKey">#FFFF8080</Color>
+	<Color x:Key="Highlight3BackgroundColorKey">#FFE40000</Color>
 	<SolidColorBrush x:Key="Highlight3BackgroundBrushKey"
-					 Color="#FFFF8080" />
+					 Color="#FFE40000" />
 
-	<Color x:Key="Highlight3BorderColorKey">#FFFF8080</Color>
+	<Color x:Key="Highlight3BorderColorKey">#FFE40000</Color>
 	<SolidColorBrush x:Key="Highlight3BorderBrushKey"
-					 Color="#FFFF8080" />
+					 Color="#FFE40000" />
 
-	<Color x:Key="Highlight3ForegroundColorKey">#FFDC0000</Color>
+	<Color x:Key="Highlight3ForegroundColorKey">#FF000000</Color>
 	<SolidColorBrush x:Key="Highlight3ForegroundBrushKey"
-					 Color="#FFDC0000" />
+					 Color="#FF000000" />
 
 
 
-	<Color x:Key="LinkForegroundColorKey">#FFFFBC7A</Color>
+	<Color x:Key="LinkForegroundColorKey">#FF7AC1FF</Color>
 	<SolidColorBrush x:Key="LinkForegroundBrushKey"
-					 Color="#FFFFBC7A" />
+					 Color="#FF7AC1FF" />
 
-	<Color x:Key="ActiveLinkForegroundColorKey">#FFF0A015</Color>
+	<Color x:Key="ActiveLinkForegroundColorKey">#FFF00000</Color>
 	<SolidColorBrush x:Key="ActiveLinkForegroundBrushKey"
-					 Color="#FFF0A015" />
+					 Color="#FFF00000" />
 
+
+
+	<Color x:Key="ValidationErrorColorKey">#FFC80000</Color>
+	<SolidColorBrush x:Key="ValidationErrorBrushKey"
+					 Color="#FFC80000" />
 
 </ResourceDictionary>

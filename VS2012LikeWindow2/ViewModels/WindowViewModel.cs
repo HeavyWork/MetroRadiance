@@ -170,11 +170,7 @@ namespace VS2012LikeWindow2.ViewModels
 
 		public void ChangeRed()
 		{
-			var resource = new ResourceDictionary
-			{
-				Source = new Uri(@"pack://application:,,,/VS2012LikeWindow2;component/Themes/Accents/Red.xaml", UriKind.Absolute)
-			};
-			ThemeService.Current.ChangeAccent(resource);
+			ThemeService.Current.ChangeAccent(Accent.Red);
 		}
 
 
@@ -182,10 +178,15 @@ namespace VS2012LikeWindow2.ViewModels
 		{
 			ThemeService.Current.ChangeTheme(Theme.Dark);
 		}
-
+		
 		public void ChangeLightTheme()
 		{
 			ThemeService.Current.ChangeTheme(Theme.Light);
+		}
+
+		public void ChangeCriticalTheme()
+		{
+			ThemeService.Current.ChangeTheme(Theme.CriticalRed);
 		}
 	}
 }
