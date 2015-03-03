@@ -1,6 +1,7 @@
 using MetroRadiance.Core;
 using MetroRadiance.Internal;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
@@ -151,17 +152,20 @@ namespace MetroRadiance
 				this.Theme = theme;
 			}
 		}
-		public void ChangePartColor(string pointkey,Color Clr, Theme theme=Theme.Dark)
+		public void ChangePartColor(List<string> pointkey,Color Clr, Theme theme=Theme.Dark)
 		{
 			this.dispatcher.Invoke(() =>
 			{
-				var uri = CreateThemeResourceUri(theme);
-				var dic = new ResourceDictionary { Source = uri };
-				((SolidColorBrush)dic[pointkey]).Color = Clr;
+				foreach (var item in pointkey)
+				{
+					var uri = CreateThemeResourceUri(theme);
+					var dic = new ResourceDictionary { Source = uri };
+					((SolidColorBrush)dic[item]).Color = Clr;
 
-				dic.Keys.OfType<string>()
-					.Where(key => this.appTheme.Contains(pointkey))
-					.ForEach(key => this.appTheme[pointkey] = dic[pointkey]);
+					dic.Keys.OfType<string>()
+						.Where(key => this.appTheme.Contains(item))
+						.ForEach(key => this.appTheme[item] = dic[item]);
+				}
 			});
 
 			this.Theme = theme;
