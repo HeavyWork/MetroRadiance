@@ -3,6 +3,7 @@ using MetroRadiance.Internal;
 using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Media;
 using System.Windows.Threading;
 
 namespace MetroRadiance
@@ -149,6 +150,21 @@ namespace MetroRadiance
 
 				this.Theme = theme;
 			}
+		}
+		public void ChangePartColor(string pointkey,Color Clr, Theme theme=Theme.Dark)
+		{
+			this.dispatcher.Invoke(() =>
+			{
+				var uri = CreateThemeResourceUri(theme);
+				var dic = new ResourceDictionary { Source = uri };
+				((SolidColorBrush)dic[pointkey]).Color = Clr;
+
+				dic.Keys.OfType<string>()
+					.Where(key => this.appTheme.Contains(pointkey))
+					.ForEach(key => this.appTheme[pointkey] = dic[pointkey]);
+			});
+
+			this.Theme = theme;
 		}
 
 		public void ChangeAccent(Accent accent)
