@@ -88,7 +88,7 @@ namespace MetroRadiance
 		public void Initialize(Application app, Theme theme, Accent accent)
 		{
 			this.dispatcher = app.Dispatcher;
-
+			this.CustomTheme = new CustomTheme();
 			var accentUri = CreateAccentResourceUri(accent);
 			if (accentUri != null)
 			{
