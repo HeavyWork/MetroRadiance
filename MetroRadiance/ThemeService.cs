@@ -27,6 +27,7 @@ namespace MetroRadiance
 
 	public class ThemeService : Notificator
 	{
+		public CustomTheme CustomTheme { get; set; }
 		#region singleton members
 
 		private static readonly ThemeService current = new ThemeService();
