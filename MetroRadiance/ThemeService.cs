@@ -168,7 +168,7 @@ namespace MetroRadiance
 				}
 			});
 
-			this.Theme = theme;
+			//this.Theme = theme;
 		}
 
 		public void ChangeAccent(Accent accent)
