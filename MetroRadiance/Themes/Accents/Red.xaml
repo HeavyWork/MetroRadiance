@@ -3,7 +3,7 @@
 
 	<Color x:Key="AccentColorKey">#FFD50404</Color>
 	<SolidColorBrush x:Key="AccentBrushKey"
-					 Color="#FFD50404" />
+					 Color="#FFA20000" />
 
 	<Color x:Key="AccentHighlightColorKey">#FFEF2525</Color>
 	<SolidColorBrush x:Key="AccentHighlightBrushKey"

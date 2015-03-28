@@ -1,9 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-	<Color x:Key="ThemeColorKey">#FF840404</Color>
+	<Color x:Key="ThemeColorKey">#FF5F0303</Color>
 	<SolidColorBrush x:Key="ThemeBrushKey"
-					 Color="#FF840404" />
+					 Color="#FF5F0303" />
 
 
 
