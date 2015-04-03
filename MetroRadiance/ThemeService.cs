@@ -1,11 +1,11 @@
-using MetroRadiance.Core;
-using MetroRadiance.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media;
 using System.Windows.Threading;
+using MetroRadiance.Core;
+using MetroRadiance.Internal;
 
 namespace MetroRadiance
 {
@@ -27,7 +27,6 @@ namespace MetroRadiance
 
 	public class ThemeService : Notificator
 	{
-		public CustomTheme CustomTheme { get; set; }
 		#region singleton members
 
 		private static readonly ThemeService current = new ThemeService();
@@ -88,7 +87,7 @@ namespace MetroRadiance
 		public void Initialize(Application app, Theme theme, Accent accent)
 		{
 			this.dispatcher = app.Dispatcher;
-			this.CustomTheme = new CustomTheme();
+
 			var accentUri = CreateAccentResourceUri(accent);
 			if (accentUri != null)
 			{
@@ -153,24 +152,6 @@ namespace MetroRadiance
 				this.Theme = theme;
 			}
 		}
-		public void ChangePartColor(List<string> pointkey,Color Clr, Theme theme=Theme.Dark)
-		{
-			this.dispatcher.Invoke(() =>
-			{
-				foreach (var item in pointkey)
-				{
-					var uri = CreateThemeResourceUri(theme);
-					var dic = new ResourceDictionary { Source = uri };
-					((SolidColorBrush)dic[item]).Color = Clr;
-
-					dic.Keys.OfType<string>()
-						.Where(key => this.appTheme.Contains(item))
-						.ForEach(key => this.appTheme[item] = dic[item]);
-				}
-			});
-
-			//this.Theme = theme;
-		}
 
 		public void ChangeAccent(Accent accent)
 		{
@@ -217,3 +198,4 @@ namespace MetroRadiance
 
 	}
 }
+
