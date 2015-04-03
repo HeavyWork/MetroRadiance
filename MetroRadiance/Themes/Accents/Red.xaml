@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-	<Color x:Key="AccentColorKey">#FFD50404</Color>
+	<Color x:Key="AccentColorKey">#FFA20000</Color>
 	<SolidColorBrush x:Key="AccentBrushKey"
 					 Color="#FFA20000" />
 
