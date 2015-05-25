@@ -235,7 +235,7 @@ namespace MetroRadiance.Controls
 		{
 			base.OnClosing(e);
 
-			if (!e.Cancel)
+			if (!e.Cancel && this.WindowSettings != null)
 			{
 				WINDOWPLACEMENT placement;
 				var hwnd = new WindowInteropHelper(this).Handle;
