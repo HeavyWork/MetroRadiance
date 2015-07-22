@@ -210,7 +210,6 @@
     <Compile Include="Controls\CaptionButton.cs" />
     <Compile Include="Controls\CaptionButtonMode.cs" />
     <Compile Include="Controls\CaptionIcon.cs" />
-    <Compile Include="Controls\DecimalRule.cs" />
     <Compile Include="Controls\ExpanderButton.cs" />
     <Compile Include="Controls\Int32Rule.cs" />
     <Compile Include="Controls\ITabItem.cs" />
