@@ -26,6 +26,8 @@
 							Value="{DynamicResource ActiveForegroundBrushKey}" />
 					<Setter Property="Height"
 							Value="38" />
+					<Setter Property="Padding"
+							Value="8,3"/>
 					<Setter Property="IsSelected"
 							Value="{Binding IsSelected, Mode=OneWay}" />
 					<Setter Property="Template">
