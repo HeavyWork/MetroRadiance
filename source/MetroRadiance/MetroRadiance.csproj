@@ -193,6 +193,11 @@
       <Generator>MSBuild:Compile</Generator>
       <DependentUpon>Generic.xaml</DependentUpon>
     </Page>
+    <Page Include="Themes\Generic.HorizontalTabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Generic.xaml</DependentUpon>
+    </Page>
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -222,6 +227,7 @@
     <Compile Include="Controls\ResizeGrip.cs" />
     <Compile Include="Controls\SystemButtons.cs" />
     <Compile Include="Controls\TabView.cs" />
+    <Compile Include="Controls\HorizontalTabView.cs" />
     <Compile Include="Controls\WindowAction.cs" />
     <Compile Include="Converters\WindowStateToVisibilityConverter.cs" />
     <Compile Include="Internal\InternalExtensions.cs" />
