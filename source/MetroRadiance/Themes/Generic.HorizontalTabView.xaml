@@ -24,10 +24,6 @@
 				<Style TargetType="{x:Type ListBoxItem}">
 					<Setter Property="Foreground"
 							Value="{DynamicResource ActiveForegroundBrushKey}" />
-					<Setter Property="Height"
-							Value="38" />
-					<Setter Property="Padding"
-							Value="8,3"/>
 					<Setter Property="IsSelected"
 							Value="{Binding IsSelected, Mode=OneWay}" />
 					<Setter Property="Template">
@@ -60,13 +56,6 @@
 				</Style>
 			</Setter.Value>
 		</Setter>
-		<Setter Property="ItemsPanel">
-			<Setter.Value>
-				<ItemsPanelTemplate>
-					<StackPanel Orientation="Horizontal"/>
-				</ItemsPanelTemplate>
-			</Setter.Value>
-		</Setter>
 		<Setter Property="ItemTemplate">
 			<Setter.Value>
 				<DataTemplate DataType="{x:Type controls:ITabItem}">
@@ -79,15 +68,16 @@
 						<TextBlock Grid.Row="1"
 								   Text="{Binding Name}"
 								   FontSize="14"
+								   Padding="10,2"
 								   Foreground="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Path=Foreground}"
 								   VerticalAlignment="Center"
 								   TextTrimming="CharacterEllipsis" />
 						<controls:Badge Grid.Row="1"
 										Grid.RowSpan="2"
 										Count="{Binding Badge}"
-										Margin="0,4,4,0"
-										HorizontalAlignment="Right"
-										VerticalAlignment="Top" />
+										Margin="5,2"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center" />
 					</Grid>
 				</DataTemplate>
 			</Setter.Value>
