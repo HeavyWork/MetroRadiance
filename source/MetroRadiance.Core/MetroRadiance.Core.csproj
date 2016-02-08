@@ -7,12 +7,13 @@
     <ProjectGuid>{A6B0A741-5BE0-479D-B813-E65672350057}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MetroRadiance.Core</RootNamespace>
+    <RootNamespace>MetroRadiance</RootNamespace>
     <AssemblyName>MetroRadiance.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,12 +36,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -49,47 +44,40 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dpi.cs" />
-    <Compile Include="Extensions.cs" />
-    <Compile Include="MonitorDpiType.cs" />
-    <Compile Include="PerMonitorDpi.cs" />
+    <Compile Include="Interop\Dpi.cs" />
+    <Compile Include="Interop\InteropExtensions.cs" />
+    <Compile Include="Interop\MonitorDpiType.cs" />
+    <Compile Include="Interop\PerMonitorDpi.cs" />
+    <Compile Include="Interop\Win32\SHCore.cs" />
+    <Compile Include="Media\ColorHelper.cs" />
+    <Compile Include="Media\HsvColor.cs" />
+    <Compile Include="Media\Luminosity.cs" />
+    <Compile Include="Platform\TransparentWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Win32\ClassLongFlags.cs" />
-    <Compile Include="Win32\ClassStyles.cs" />
-    <Compile Include="Win32\GWL.cs" />
-    <Compile Include="Win32\HitTestValues.cs" />
-    <Compile Include="Win32\MonitorDefaultTo.cs" />
-    <Compile Include="Win32\NativeExtensions.cs" />
-    <Compile Include="Win32\NativeMethods.cs" />
-    <Compile Include="Win32\SW.cs" />
-    <Compile Include="Win32\SWP.cs" />
-    <Compile Include="Win32\WINDOWPLACEMENT.cs" />
-    <Compile Include="Win32\WM.cs" />
-    <Compile Include="Win32\WS.cs" />
-    <Compile Include="Win32\WSEX.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <Compile Include="Platform\RawWindow.cs" />
+    <Compile Include="Platform\WindowsTheme.cs" />
+    <Compile Include="Interop\Win32\ClassLongPtrIndex.cs" />
+    <Compile Include="Interop\Win32\WindowClassStyles.cs" />
+    <Compile Include="Interop\Win32\Dwmapi.cs" />
+    <Compile Include="Interop\Win32\DWMWINDOWATTRIBUTE.cs" />
+    <Compile Include="Interop\Win32\WindowLongFlags.cs" />
+    <Compile Include="Interop\Win32\HitTestValues.cs" />
+    <Compile Include="Interop\Win32\MonitorDefaultTo.cs" />
+    <Compile Include="Interop\Win32\NativeExtensions.cs" />
+    <Compile Include="Interop\Win32\User32.cs" />
+    <Compile Include="Interop\Win32\ShowWindowFlags.cs" />
+    <Compile Include="Interop\Win32\SetWindowPosFlags.cs" />
+    <Compile Include="Interop\Win32\WINDOWPLACEMENT.cs" />
+    <Compile Include="Interop\Win32\WindowsMessages.cs" />
+    <Compile Include="Interop\Win32\WindowStyles.cs" />
+    <Compile Include="Interop\Win32\WindowExStyles.cs" />
+    <Compile Include="Utilities\Disposable.cs" />
     <None Include="MetroRadiance.Core.nuspec" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -2,33 +2,32 @@
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
 					xmlns:chrome="http://schemes.grabacr.net/winfx/2014/chrome"
-					xmlns:controls="clr-namespace:MetroRadiance.Controls">
+					xmlns:controls="clr-namespace:MetroRadiance.UI.Controls">
 
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="/MetroRadiance;component/Themes/Generic.ResizeGrip.xaml" />
 	</ResourceDictionary.MergedDictionaries>
-
-	<WindowChrome x:Key="DefaultChrome"
-				  ResizeBorderThickness="0"
-				  GlassFrameThickness="0"
-				  CornerRadius="0" />
 
 	<Style TargetType="{x:Type controls:MetroWindow}">
 		<Setter Property="Background"
 				Value="{DynamicResource ThemeBrushKey}" />
 		<Setter Property="Foreground"
 				Value="{DynamicResource ActiveForegroundBrushKey}" />
+		<Setter Property="BorderBrush"
+				Value="{DynamicResource AccentBrushKey}" />
+		<Setter Property="BorderThickness"
+				Value="0" />
 		<Setter Property="Padding"
 				Value="0" />
-		<Setter Property="WindowChrome.WindowChrome"
-				Value="{Binding RelativeSource={RelativeSource Self}, Path=WindowChrome}" />
-		<Setter Property="WindowChrome"
-				Value="{StaticResource DefaultChrome}" />
-		<Setter Property="MetroChromeBehavior">
+		<Setter Property="SnapsToDevicePixels"
+				Value="True" />
+		<Setter Property="UseLayoutRounding"
+				Value="True" />
+		<Setter Property="ShellChrome">
 			<Setter.Value>
-				<chrome:MetroChromeBehavior ActiveBrush="{DynamicResource AccentBrushKey}"
-											InactiveBrush="{DynamicResource BorderBrushKey}"
-											Mode="VisualStudio2013" />
+				<WindowChrome ResizeBorderThickness="0"
+							  GlassFrameThickness="0"
+							  CornerRadius="0" />
 			</Setter.Value>
 		</Setter>
 		<Setter Property="Template">
@@ -37,7 +36,8 @@
 					<Border Background="{TemplateBinding Background}"
 							BorderBrush="{TemplateBinding BorderBrush}"
 							BorderThickness="{TemplateBinding BorderThickness}"
-							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+							UseLayoutRounding="{TemplateBinding UseLayoutRounding}">
 						<AdornerDecorator>
 							<Grid>
 								<ContentPresenter Margin="{TemplateBinding Padding}"
@@ -64,8 +64,15 @@
 		<Style.Triggers>
 			<Trigger Property="WindowState"
 					 Value="Maximized">
+				<Setter Property="BorderThickness"
+						Value="0" />
 				<Setter Property="Padding"
 						Value="8" />
+			</Trigger>
+			<Trigger Property="IsActive"
+					 Value="False">
+				<Setter Property="BorderBrush"
+						Value="{DynamicResource BorderBrushKey}" />
 			</Trigger>
 		</Style.Triggers>
 	</Style>

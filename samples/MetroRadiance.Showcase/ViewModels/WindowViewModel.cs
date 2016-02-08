@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using Livet;
-using MetroRadiance;
-using VS2012LikeWindow2.Views;
+using MetroRadiance.UI;
 
-namespace VS2012LikeWindow2.ViewModels
+namespace MetroRadiance.Showcase.ViewModels
 {
 	internal class WindowViewModel : ViewModel
 	{
@@ -170,13 +170,13 @@ namespace VS2012LikeWindow2.ViewModels
 
 		public void ChangeRed()
 		{
-			var resource = new ResourceDictionary
-			{
-				Source = new Uri(@"pack://application:,,,/VS2012LikeWindow2;component/Themes/Accents/Red.xaml", UriKind.Absolute)
-			};
-			ThemeService.Current.ChangeAccent(resource);
+			ThemeService.Current.ChangeAccent(Colors.Red.ToAccent());
 		}
 
+		public void ChangeWindows()
+		{
+			ThemeService.Current.ChangeAccent(Accent.Windows);
+		}
 
 		public void ChangeDarkTheme()
 		{

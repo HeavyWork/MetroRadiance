@@ -1,26 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Interop;
+using MetroRadiance.Chrome;
+using MetroRadiance.Interop.Win32;
+using MetroRadiance.Platform;
 using Microsoft.Win32;
 
-namespace VS2012LikeWindow2.Views
+namespace MetroRadiance.Showcase.Views
 {
-	/// <summary>
-	/// MainWindow.xaml の相互作用ロジック
-	/// </summary>
-	public partial class MainWindow
+	partial class MainWindow
 	{
 		public MainWindow()
 		{
@@ -30,7 +21,7 @@ namespace VS2012LikeWindow2.Views
 		private void OpenFileDialog(object sender, RoutedEventArgs e)
 		{
 			var dialog = new OpenFileDialog();
-			if ((bool)dialog.ShowDialog())
+			if (dialog.ShowDialog() ?? false)
 			{
 
 			}
@@ -40,14 +31,34 @@ namespace VS2012LikeWindow2.Views
 		{
 			this.Hide();
 
-			await this.Countdown();
+			await Task.Delay(2500);
 
 			this.Visibility = Visibility.Visible;
 		}
 
-		private Task Countdown()
+		protected override void OnContentRendered(EventArgs e)
 		{
-			return Task.Factory.StartNew(() => Thread.Sleep(2500));
+			base.OnContentRendered(e);
+			//SetGlowingForActiveWindow();
+		}
+
+		private static async void SetGlowingForActiveWindow()
+		{
+			await Task.Delay(2500);
+
+			var hWnd = User32.GetForegroundWindow();
+			var appHandles = Application.Current.Windows
+				.OfType<Window>()
+				.Select(x => PresentationSource.FromVisual(x) as HwndSource)
+				.Where(x => x != null)
+				.Select(x => x.Handle)
+				.ToArray();
+			if (appHandles.All(x => x != hWnd))
+			{
+				var external = new ExternalWindow(hWnd);
+				var chrome = new WindowChrome();
+				chrome.Attach(external);
+			}
 		}
 	}
 }

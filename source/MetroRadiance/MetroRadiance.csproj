@@ -9,10 +9,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MetroRadiance</RootNamespace>
     <AssemblyName>MetroRadiance</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,23 +34,28 @@
     <DocumentationFile>bin\Release\MetroRadiance.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release RETRO|AnyCPU' ">
+    <OutputPath>bin\Release RETRO\</OutputPath>
+    <DefineConstants>TRACE;RETRO</DefineConstants>
+    <DocumentationFile>bin\Release\MetroRadiance.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>1591</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\assemblies\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\assemblies\System.Windows.Interactivity.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -154,6 +160,11 @@
       <Generator>MSBuild:Compile</Generator>
       <DependentUpon>Generic.xaml</DependentUpon>
     </Page>
+    <Page Include="Themes\Generic.HorizontalTabView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Generic.xaml</DependentUpon>
+    </Page>
     <Page Include="Themes\Generic.LinkButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -194,11 +205,6 @@
       <Generator>MSBuild:Compile</Generator>
       <DependentUpon>Generic.xaml</DependentUpon>
     </Page>
-    <Page Include="Themes\Generic.HorizontalTabView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Generic.xaml</DependentUpon>
-    </Page>
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -209,54 +215,43 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behaviors\DirectWindowAction.cs" />
-    <Compile Include="Controls\Badge.cs" />
-    <Compile Include="Controls\BindableRichTextBox.cs" />
-    <Compile Include="Controls\BindableTextBlock.cs" />
-    <Compile Include="Controls\CaptionButton.cs" />
-    <Compile Include="Controls\CaptionButtonMode.cs" />
-    <Compile Include="Controls\CaptionIcon.cs" />
-    <Compile Include="Controls\ExpanderButton.cs" />
-    <Compile Include="Controls\HorizontalTabView.cs" />
-    <Compile Include="Controls\Int32Rule.cs" />
-    <Compile Include="Controls\ITabItem.cs" />
-    <Compile Include="Controls\IWindowSettings.cs" />
-    <Compile Include="Controls\LinkButton.cs" />
-    <Compile Include="Controls\MetroWindow.cs" />
-    <Compile Include="Controls\ProgressRing.cs" />
-    <Compile Include="Controls\PromptComboBox.cs" />
-    <Compile Include="Controls\PromptTextBox.cs" />
-    <Compile Include="Controls\ResizeGrip.cs" />
-    <Compile Include="Controls\SystemButtons.cs" />
-    <Compile Include="Controls\TabView.cs" />
-    <Compile Include="Controls\ThemeHelper.cs" />
-    <Compile Include="Controls\WindowAction.cs" />
-    <Compile Include="Converters\WindowStateToVisibilityConverter.cs" />
-    <Compile Include="Internal\Disposable.cs" />
-    <Compile Include="Internal\InternalExtensions.cs" />
+    <Compile Include="UI\Accent.cs" />
+    <Compile Include="UI\Controls\HorizontalTabView.cs" />
+    <Compile Include="UI\Interactivity\DirectWindowAction.cs" />
+    <Compile Include="UI\Controls\Badge.cs" />
+    <Compile Include="UI\Controls\BindableRichTextBox.cs" />
+    <Compile Include="UI\Controls\BindableTextBlock.cs" />
+    <Compile Include="UI\Controls\CaptionButton.cs" />
+    <Compile Include="UI\Controls\CaptionButtonMode.cs" />
+    <Compile Include="UI\Controls\CaptionIcon.cs" />
+    <Compile Include="UI\Controls\ExpanderButton.cs" />
+    <Compile Include="UI\Controls\Int32Rule.cs" />
+    <Compile Include="UI\Controls\ITabItem.cs" />
+    <Compile Include="UI\Controls\IWindowSettings.cs" />
+    <Compile Include="UI\Controls\LinkButton.cs" />
+    <Compile Include="UI\Controls\MetroWindow.cs" />
+    <Compile Include="UI\Controls\ProgressRing.cs" />
+    <Compile Include="UI\Controls\PromptComboBox.cs" />
+    <Compile Include="UI\Controls\PromptTextBox.cs" />
+    <Compile Include="UI\Controls\ResizeGrip.cs" />
+    <Compile Include="UI\Controls\SystemButtons.cs" />
+    <Compile Include="UI\Controls\TabView.cs" />
+    <Compile Include="UI\Controls\ThemeHelper.cs" />
+    <Compile Include="UI\Controls\WindowAction.cs" />
+    <Compile Include="UI\Converters\WindowStateToVisibilityConverter.cs" />
+    <Compile Include="UI\Theme.cs" />
+    <Compile Include="UI\ThemeExtensions.cs" />
+    <Compile Include="Utilities\InternalExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Include="UI\ThemeService.cs" />
+    <Compile Include="Utilities\TypeForwardedTo.g.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
+      <DependentUpon>TypeForwardedTo.tt</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="ThemeService.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="MetroRadiance.nuspec" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <AppDesigner Include="Properties\" />
     <Page Include="Styles\Controls.FocusVisualStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -269,7 +264,12 @@
       <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Utilities\TypeForwardedTo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TypeForwardedTo.g.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MetroRadiance.Chrome\MetroRadiance.Chrome.csproj">
       <Project>{21b4ad15-d9fa-4873-bfad-1eeefbc6c264}</Project>
@@ -279,6 +279,13 @@
       <Project>{a6b0a741-5be0-479d-b813-e65672350057}</Project>
       <Name>MetroRadiance.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RetroRadiance\RetroRadiance.csproj" Condition="'$(Configuration)' == 'Release RETRO'">
+      <Project>{7f898b3a-da17-4cab-b387-5629b5faca49}</Project>
+      <Name>RetroRadiance</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

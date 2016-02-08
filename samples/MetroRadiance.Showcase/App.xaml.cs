@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using MetroRadiance;
+using MetroRadiance.UI;
 
-namespace VS2012LikeWindow2
+namespace MetroRadiance.Showcase
 {
 	public partial class App
 	{
@@ -15,7 +13,7 @@ namespace VS2012LikeWindow2
 		{
 			base.OnStartup(e);
 
-			ThemeService.Current.Initialize(this, Theme.Dark, Accent.Blue);
+			ThemeService.Current.Register(this, Theme.Dark, Accent.Windows);
 		}
 	}
 }
