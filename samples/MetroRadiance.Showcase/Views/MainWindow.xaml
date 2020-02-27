@@ -8,6 +8,7 @@
 					  xmlns:controls="http://schemes.grabacr.net/winfx/2014/controls"
 					  xmlns:viewModels="clr-namespace:MetroRadiance.Showcase.ViewModels"
 					  xmlns:views="clr-namespace:MetroRadiance.Showcase.Views"
+					  xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
 					  Title="MainWindow"
 					  Width="700"
 					  Height="700"
@@ -79,34 +80,34 @@
 							Width="100"
 							Height="30"
 							Margin="5">
-						<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:CallMethodAction TargetObject="{Binding}"
+						<b:Interaction.Triggers>
+							<b:EventTrigger EventName="Click">
+								<b:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangeDarkTheme" />
-							</i:EventTrigger>
-						</i:Interaction.Triggers>
+							</b:EventTrigger>
+						</b:Interaction.Triggers>
 					</Button>
 					<Button Content="Light theme"
 							Width="100"
 							Height="30"
 							Margin="5">
-						<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:CallMethodAction TargetObject="{Binding}"
+						<b:Interaction.Triggers>
+							<b:EventTrigger EventName="Click">
+								<b:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangeLightTheme" />
-							</i:EventTrigger>
-						</i:Interaction.Triggers>
+							</b:EventTrigger>
+						</b:Interaction.Triggers>
 					</Button>
 					<Button Content="Windows theme"
 							Width="120"
 							Height="30"
 							Margin="5">
-						<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:CallMethodAction TargetObject="{Binding}"
+						<b:Interaction.Triggers>
+							<b:EventTrigger EventName="Click">
+								<b:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangeWindowsTheme" />
-							</i:EventTrigger>
-						</i:Interaction.Triggers>
+							</b:EventTrigger>
+						</b:Interaction.Triggers>
 					</Button>
 				</WrapPanel>
 
@@ -117,56 +118,56 @@
 							Width="100"
 							Height="30"
 							Margin="5">
-						<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:CallMethodAction TargetObject="{Binding}"
+						<b:Interaction.Triggers>
+							<b:EventTrigger EventName="Click">
+								<b:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangePurple" />
-							</i:EventTrigger>
-						</i:Interaction.Triggers>
+							</b:EventTrigger>
+						</b:Interaction.Triggers>
 					</Button>
 					<Button Content="Blue"
 							Width="100"
 							Height="30"
 							Margin="5">
-						<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:CallMethodAction TargetObject="{Binding}"
+						<b:Interaction.Triggers>
+							<b:EventTrigger EventName="Click">
+								<b:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangeBlue" />
-							</i:EventTrigger>
-						</i:Interaction.Triggers>
+							</b:EventTrigger>
+						</b:Interaction.Triggers>
 					</Button>
 					<Button Content="Orange"
 							Width="100"
 							Height="30"
 							Margin="5">
-						<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:CallMethodAction TargetObject="{Binding}"
+						<b:Interaction.Triggers>
+							<b:EventTrigger EventName="Click">
+								<b:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangeOrange" />
-							</i:EventTrigger>
-						</i:Interaction.Triggers>
+							</b:EventTrigger>
+						</b:Interaction.Triggers>
 					</Button>
 					<Button Content="Red"
 							Width="100"
 							Height="30"
 							Margin="5">
-						<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:CallMethodAction TargetObject="{Binding}"
+						<b:Interaction.Triggers>
+							<b:EventTrigger EventName="Click">
+								<b:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangeRed" />
-							</i:EventTrigger>
-						</i:Interaction.Triggers>
+							</b:EventTrigger>
+						</b:Interaction.Triggers>
 					</Button>
 					<Button Content="Windows"
 							Width="100"
 							Height="30"
 							Margin="5">
-						<i:Interaction.Triggers>
-							<i:EventTrigger EventName="Click">
-								<ei:CallMethodAction TargetObject="{Binding}"
+						<b:Interaction.Triggers>
+							<b:EventTrigger EventName="Click">
+								<b:CallMethodAction TargetObject="{Binding}"
 													 MethodName="ChangeWindows" />
-							</i:EventTrigger>
-						</i:Interaction.Triggers>
+							</b:EventTrigger>
+						</b:Interaction.Triggers>
 					</Button>
 				</WrapPanel>
 
