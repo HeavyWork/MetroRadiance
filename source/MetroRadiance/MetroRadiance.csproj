@@ -85,17 +85,14 @@
     <Page Include="Styles\Controls.Button.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.CheckBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.Expander.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.Menu.xaml">
       <SubType>Designer</SubType>
@@ -104,27 +101,22 @@
     <Page Include="Styles\Controls.PasswordBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.ProgressBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.ScrollBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.ToggleButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.Tooltip.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -280,12 +272,10 @@
     <Page Include="Styles\Controls.FocusVisualStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
     <Page Include="Styles\Controls.RadioButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <DependentUpon>Controls.xaml</DependentUpon>
     </Page>
   </ItemGroup>
   <ItemGroup>
